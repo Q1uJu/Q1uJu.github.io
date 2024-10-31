@@ -1,0 +1,217 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Q1uJu's Blog | Q1uJu's Blog</title><meta name="author" content="Q1uJu"><meta name="copyright" content="Q1uJu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Q1uJu-Blog搭建过程Blog地址q1uju.cc或www.q1uju.cc &lt;放个界面展示截图&gt; 博客搭建流程搭建过程参照Fomalhaut大佬的b站搭建教程，使用Hexo作为博客框架。 链接：https:&#x2F;&#x2F;space.bilibili.com&#x2F;220757832&#x2F;channel&#x2F;collectiondetail?sid&#x3D;886469&amp;spm_id_from&#x3D;333.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Q1uJu&#39;s Blog">
+<meta property="og:url" content="http://q1uju.cc/2024/10/31/Q1uJu-Blog%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/index.html">
+<meta property="og:site_name" content="Q1uJu&#39;s Blog">
+<meta property="og:description" content="Q1uJu-Blog搭建过程Blog地址q1uju.cc或www.q1uju.cc &lt;放个界面展示截图&gt; 博客搭建流程搭建过程参照Fomalhaut大佬的b站搭建教程，使用Hexo作为博客框架。 链接：https:&#x2F;&#x2F;space.bilibili.com&#x2F;220757832&#x2F;channel&#x2F;collectiondetail?sid&#x3D;886469&amp;spm_id_from&#x3D;333.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://q1uju.cc/assets/background.png">
+<meta property="article:published_time" content="2024-10-31T07:40:24.924Z">
+<meta property="article:modified_time" content="2024-10-31T07:39:28.905Z">
+<meta property="article:author" content="Q1uJu">
+<meta property="article:tag" content="CTF-Crypto&#x2F;Misc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://q1uju.cc/assets/background.png"><link rel="shortcut icon" href="/assets/favicon.ico"><link rel="canonical" href="http://q1uju.cc/2024/10/31/Q1uJu-Blog%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        if (name && globalFn[key][name]) return
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Q1uJu\'s Blog',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-10-31 15:39:28'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/assets/fac4.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> Galley</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/assets/background.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Q1uJu's Blog</span></a><a class="nav-page-title" href="/"><span class="site-name">Q1uJu's Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> Galley</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Untitled</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">Created</span><time datetime="2024-10-31T07:40:24.924Z" title="Created 2024-10-31 15:40:24">2024-10-31</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Q1uJu-Blog搭建过程"><a href="#Q1uJu-Blog搭建过程" class="headerlink" title="Q1uJu-Blog搭建过程"></a>Q1uJu-Blog搭建过程</h1><h2 id="Blog地址"><a href="#Blog地址" class="headerlink" title="Blog地址"></a>Blog地址</h2><p>q1uju.cc或<a target="_blank" rel="noopener" href="http://www.q1uju.cc/">www.q1uju.cc</a></p>
+<p>&lt;放个界面展示截图&gt;</p>
+<h2 id="博客搭建流程"><a href="#博客搭建流程" class="headerlink" title="博客搭建流程"></a>博客搭建流程</h2><p>搭建过程参照Fomalhaut大佬的b站搭建教程，使用Hexo作为博客框架。</p>
+<p>链接：<a target="_blank" rel="noopener" href="https://space.bilibili.com/220757832/channel/collectiondetail?sid=886469&spm_id_from=333.788.0.0">https://space.bilibili.com/220757832/channel/collectiondetail?sid=886469&amp;spm_id_from=333.788.0.0</a></p>
+<p><strong>ps：</strong>搭建过程中忘记截图记录了，有些过程可能没有图片。</p>
+<h3 id="前置工作"><a href="#前置工作" class="headerlink" title="前置工作"></a>前置工作</h3><p>本地已经安装了nodejs、git，直接在GitHub中创建一个新仓库。</p>
+<p><img src="https://gitee.com/Q1uJu/picture_bed/raw/master/image-20241030203558852.png" alt="image-20241030203558852"></p>
+<p>用以下git命令生成ssh公钥，用于计算机与Github连接。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;邮箱地址&quot;</span><br></pre></td></tr></table></figure>
+
+<p>执行完生成命令后在C盘用户文件夹下的.ssh文件夹看到id_rsa.pub文件，将里面内容复制并粘贴至GitHub里配置SSH KEY。</p>
+<p><img src="https://gitee.com/Q1uJu/picture_bed/raw/master/image-20241030204054915.png" alt="image-20241030204054915"></p>
+<p>输入以下命令测试连接，出现连接到账户的信息即为完成。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>在Git BASH输入如下命令安装Hexo。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>安装完后输入<code>hexo -v</code>验证是否安装成功。</p>
+<p><img src="https://gitee.com/Q1uJu/picture_bed/raw/master/image-20241030204927475.png" alt="image-20241030204927475"></p>
+<p>在目标路径执行下方命令初始化Hexo项目。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init hexo</span><br></pre></td></tr></table></figure>
+
+<p>进入hexo，输入<code>npm i</code>安装相关依赖。安装完以来后，输入<code>hexo server</code>或者<code>hexo s</code>启动项目。打开浏览器，输入地址：<a target="_blank" rel="noopener" href="http://localhost:4000/%EF%BC%8C%E5%8F%AF%E7%9C%8B%E5%88%B0%E5%88%9D%E5%A7%8B%E6%9E%84%E5%BB%BA%E5%A5%BD%E7%9A%84%E5%8D%9A%E5%AE%A2%E3%80%82">http://localhost:4000/，可看到初始构建好的博客。</a></p>
+<h3 id="将静态博客挂载到GitHub-Pages"><a href="#将静态博客挂载到GitHub-Pages" class="headerlink" title="将静态博客挂载到GitHub Pages"></a>将静态博客挂载到GitHub Pages</h3><p>执行如下命令安装hexo-deployer-git。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>修改_config.yml文件最后一部分。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">git@github.com:Q1uJu/Q1uJu.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
+
+<p>修改好配置后运行如下命令，将代码部署到GitHub。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy  // Git BASH终端</span><br><span class="line">hexo clean; hexo generate; hexo deploy  // VSCODE终端</span><br></pre></td></tr></table></figure>
+
+<p>出现<code>Deploy done</code>说明部署成功。</p>
+<h3 id="Vercel部署与自定义域名"><a href="#Vercel部署与自定义域名" class="headerlink" title="Vercel部署与自定义域名"></a>Vercel部署与自定义域名</h3><p>按流程使用Vercel部署完Hexo项目，在西部数码购买域名q1uju.cc，并绑定Vercel自定义域名。</p>
+<p><img src="https://gitee.com/Q1uJu/picture_bed/raw/master/image-20241031153415275.png" alt="image-20241031153415275"></p>
+<h3 id="博客界面主题及美化"><a href="#博客界面主题及美化" class="headerlink" title="博客界面主题及美化"></a>博客界面主题及美化</h3><p>在博客根目录打开Git BASH，输入下方代码安装butterfly主题。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-theme-butterfly</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">未安装pug和stylus的渲染器还需再安装这两个渲染器</span></span><br><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
+
+<p>在站点配置文件<code>_config.yml</code>中，把主题改为butterfly。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">butterfly</span></span><br></pre></td></tr></table></figure>
+
+<p>剩余美化流程均根据Fomalhaut佬的教程更改，具体美化情况由博客界面直接展示。</p>
+<h2 id="图床搭建流程"><a href="#图床搭建流程" class="headerlink" title="图床搭建流程"></a>图床搭建流程</h2><p>搭建过程参照<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1766197%EF%BC%8C%E4%BD%BF%E7%94%A8PicGo%E6%8F%92%E4%BB%B6%EF%BC%8CGitee%E4%BD%9C%E4%B8%BA%E5%9B%BE%E5%BA%8A%E3%80%82">https://cloud.tencent.com/developer/article/1766197，使用PicGo插件，Gitee作为图床。</a></p>
+<p>使用原有的Gitee账号登录，并在Gitee中新建一个项目。</p>
+<p><img src="https://gitee.com/Q1uJu/picture_bed/raw/master/image-20241030202224483.png"></p>
+<p><img src="https://gitee.com/Q1uJu/picture_bed/raw/master/image-20241030202224483.png" alt="image-20241030202224483"></p>
+<p>在设置中生成一个新的私人令牌并保存token。</p>
+<p><img src="https://gitee.com/Q1uJu/picture_bed/raw/master/image-20241030202302296.png" alt="image-20241030202302296"></p>
+<p><img src="https://gitee.com/Q1uJu/picture_bed/raw/master/image-20241030202315756.png" alt="image-20241030202315756"></p>
+<p>下载安装PicGO。</p>
+<p>PicGo链接：<a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/releases">https://github.com/Molunerfinn/PicGo/releases</a></p>
+<p>我选择的是当前最新的稳定版2.3.1。</p>
+<p><img src="https://gitee.com/Q1uJu/picture_bed/raw/master/image-20241030202530570.png" alt="image-20241030202530570"></p>
+<p>下载Gitee上传的插件。</p>
+<p><img src="https://gitee.com/Q1uJu/picture_bed/raw/master/image-20241030202602864.png" alt="image-20241030202602864"></p>
+<p>打开PicGo，找到图床设置中的Gitee并填写相关信息。</p>
+<ul>
+<li>repo：用户名&#x2F;项目（不用带http协议及.git）</li>
+<li>token：新建私人令牌中复制的token</li>
+</ul>
+<p><img src="https://gitee.com/Q1uJu/picture_bed/raw/master/image-20241030202511578.png" alt="image-20241030202511578"></p>
+<p>点击[<strong>设置默认图床</strong>]</p>
+<p>打开Typora，文件-&gt;偏好设置-&gt;图像。</p>
+<p><img src="https://gitee.com/Q1uJu/picture_bed/raw/master/image-20241030202907568.png" alt="image-20241030202907568"></p>
+<p>设置好后点击[<strong>验证图片上传选项</strong>]，图床搭建及设置完成。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://q1uju.cc">Q1uJu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://q1uju.cc/2024/10/31/Q1uJu-Blog%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/">http://q1uju.cc/2024/10/31/Q1uJu-Blog%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/assets/background.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/assets/fac4.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Q1uJu</div><div class="author-info-description">Learning Record</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Q1uJu"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/Q1uJu" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:1613732401@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Q1uJu-Blog%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">Q1uJu-Blog搭建过程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Blog%E5%9C%B0%E5%9D%80"><span class="toc-number">1.1.</span> <span class="toc-text">Blog地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B"><span class="toc-number">1.2.</span> <span class="toc-text">博客搭建流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.2.1.</span> <span class="toc-text">前置工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Hexo"><span class="toc-number">1.2.2.</span> <span class="toc-text">安装Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%86%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%8C%82%E8%BD%BD%E5%88%B0GitHub-Pages"><span class="toc-number">1.2.3.</span> <span class="toc-text">将静态博客挂载到GitHub Pages</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vercel%E9%83%A8%E7%BD%B2%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D"><span class="toc-number">1.2.4.</span> <span class="toc-text">Vercel部署与自定义域名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E7%95%8C%E9%9D%A2%E4%B8%BB%E9%A2%98%E5%8F%8A%E7%BE%8E%E5%8C%96"><span class="toc-number">1.2.5.</span> <span class="toc-text">博客界面主题及美化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B"><span class="toc-number">1.3.</span> <span class="toc-text">图床搭建流程</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url(/assets/footer.png);"><div id="footer-wrap"><div class="copyright">&copy;2024 By Q1uJu</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">There will be fog lights in the mountains.</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
