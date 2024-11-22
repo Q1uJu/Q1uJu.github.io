@@ -7,7 +7,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://q1uju.cc/assets/background.png">
 <meta property="article:published_time" content="2024-11-22T05:59:42.183Z">
-<meta property="article:modified_time" content="2024-11-22T08:28:05.816Z">
+<meta property="article:modified_time" content="2024-11-22T08:32:28.632Z">
 <meta property="article:author" content="Q1uJu">
 <meta property="article:tag" content="CTF-Crypto&#x2F;Misc">
 <meta name="twitter:card" content="summary">
@@ -147,7 +147,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2024-11-22 16:28:05'
+  postUpdate: '2024-11-22 16:32:28'
 }</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/assets/fac4.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> Galley</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/assets/background.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Q1uJu's Blog</span></a><a class="nav-page-title" href="/"><span class="site-name">Cryptohack-ELLIPTIC CURVES</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> Galley</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Cryptohack-ELLIPTIC CURVES</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">Created</span><time datetime="2024-11-22T05:59:42.183Z" title="Created 2024-11-22 13:59:42">2024-11-22</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><meta name="referrer" content="no-referrer">
 
 
@@ -210,9 +210,9 @@
 <p>(h) $P+Q&#x3D;(x_3,y_3)$</p>
 </blockquote>
 <p>我们正在处理一个有限域，因此上述计算应该以$p$为模进行，我们不“除”整数，而是乘以一个数字的模逆。例如$5^{-1}\equiv{9}\ mod\ 11$</p>
-<p>我们将使用以下椭圆曲线和素数：<br>$$<br>E:Y^2&#x3D;X^3+497X+1768<del>mod</del>9739<br>$$</p>
+<p>我们将使用以下椭圆曲线和素数：<br>$$<br>E:Y^2&#x3D;X^3+497X+1768\ mod\ 9739<br>$$</p>
 <blockquote>
-<p>你可以通过以下等式来测试你的算法：$X+Y&#x3D;(1024,4440),X+X&#x3D;(7284,2107)\for\quad X&#x3D;(5274,2841),Y&#x3D;(8669,740)$</p>
+<p>你可以通过以下等式来测试你的算法：$X+Y&#x3D;(1024,4440),X+X&#x3D;(7284,2107)\ for\quad X&#x3D;(5274,2841),Y&#x3D;(8669,740)$</p>
 </blockquote>
 <p>使用该曲线和点$P&#x3D;(493,5564),Q&#x3D;(1539,4742),R&#x3D;(4403,5202)$，通过实现上述算法找到点$S(x,y)&#x3D;P+P+Q+R$</p>
 <blockquote>
@@ -239,7 +239,7 @@
 <blockquote>
 <p>这不是最有效的算法，有许多有趣的方法可以改进这种计算，但这对我们的工作来说已经足够了。</p>
 </blockquote>
-<p>我们将使用以下椭圆曲线和素数：<br>$$<br>E:Y^2&#x3D;X^3+497X+1768<del>mod</del>9739<br>$$</p>
+<p>我们将使用以下椭圆曲线和素数：<br>$$<br>E:Y^2&#x3D;X^3+497X+1768\ mod\ 9739<br>$$</p>
 <blockquote>
 <p>你可以通过以下等式来测试你的算法：</p>
 <p>$[1337]X&#x3D;(1089,6931)\quad for\quad X&#x3D;(5323,5438)$</p>
@@ -267,7 +267,7 @@
 <li>由标量乘法的可结合性，$S&#x3D;[n_A]Q_B&#x3D;[n_B]Q_A$</li>
 <li>Alice和Bob能够使用$S$作为他们的共享秘密</li>
 </ul>
-<p>使用曲线、素数和生成器：<br>$$<br>E:Y^2&#x3D;X^3+497X+1768<del>mod</del>9739,~~G:(1804,5368)<br>$$<br>当Alice发送给你$Q_A&#x3D;(815,3190)$后，用你的秘密整数$n_B&#x3D;1829$计算共享秘密。</p>
+<p>使用曲线、素数和生成器：<br>$$<br>E:Y^2&#x3D;X^3+497X+1768\ mod\ 9739,\quad G:(1804,5368)<br>$$<br>当Alice发送给你$Q_A&#x3D;(815,3190)$后，用你的秘密整数$n_B&#x3D;1829$计算共享秘密。</p>
 <p>通过计算$x$坐标的SHA1哈希生成密钥（取坐标的整数表示并将其转换为字符串）。flag就是你找到的十六进制摘要。</p>
 <blockquote>
 <p>这条曲线不是加密安全的！！我们为这些初学者挑战选择了一个小素数，以便在学习时保持一切快速。加密安全曲线具有比特大小≈256的素数</p>
@@ -281,7 +281,7 @@
 <blockquote>
 <p>对于这些挑战，我们使用了素数$p≡3\ mod\ 4$，这将帮助你从$y^2$中找到y</p>
 </blockquote>
-<p>使用曲线、素数和生成器：<br>$$<br>E:Y^2&#x3D;X^3+497X+1768<del>mod</del>9739,~~G:(1804,5368)<br>$$<br>在Alice发送给你$x(Q_A)&#x3D;4726$后用你的秘密整数$n_B&#x3D;6534$计算出共享秘密值。</p>
+<p>使用曲线、素数和生成器：<br>$$<br>E:Y^2&#x3D;X^3+497X+1768\ mod\ 9739,\quad G:(1804,5368)<br>$$<br>在Alice发送给你$x(Q_A)&#x3D;4726$后用你的秘密整数$n_B&#x3D;6534$计算出共享秘密值。</p>
 <p>使用<code>decrypt.py</code>文件来解码flag</p>
 <blockquote>
 <p>{‘iv’: ‘cd9da9f1c60925922377ea952afc212c’, ‘encrypted_flag’: ‘febcbe3a3414a730b125931dccf912d2239f3e969c4334d95ed0ec86f6449ad8’}</p>
